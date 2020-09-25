@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Pitajte nas!</title>
+    <link rel="icon" href="img/logo.png">
+    
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/upit.css">
+    <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+
+</head>
+
+<body>
+    <div class="site-wrapper">
+
+        <div class="site-wrapper-inner">
+
+            <div class="cover-container">
+                <!--Navigacioni bar-->
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h3 class="masthead-brand" id="hSlika"><img src="img/logo.png" id="logo"></h3>
+                        <nav>
+                            <ul class="nav masthead-nav">
+                                <li><a href="index.html">Početna</a></li>
+                                <li><a href="satovi.html">Satovi</a></li>
+                                <li class="active"><a href="upit.html">Pitajte nas!</a></li>
+                                <li><a href="kontakt.html">Kontakt</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div><!--navigacioni bar-->
+
+                <div class="inner cover">
+                    <h1 class="cover-heading">Tu smo za Vas!</h1>
+                    <p>Ukoliko imate bilo kakva pitanja, pohvale, primedbe, ne ustručavajte se da nam pišete.</p>
+                    <form id="forma" >
+                        <div class="row control-group">
+                              <div class="form-group col-md-12 floating-label-form-group controls">
+                                  <input type="text" class="form-control" name="imePrezime" placeholder="Ime i prezime" id="imePrezime" minlength="5" required="required" data-error="Ime je obavezno." >
+                                  <p class="help-block text-danger hide">Neophodno polje!</p>
+                              </div>
+                        </div>
+                        <div class="row control-group">
+                              <div class="form-group col-md-12 floating-label-form-group controls">
+                                  <input type="email" class="form-control" name="email" placeholder="E-mail" id="email" required="required" data-error="EMAIL je obavezan.">
+                                  <p class="help-block text-danger hide" >Neophodno polje!</p>
+                              </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-md-12 floating-label-form-group controls">
+                                    <textarea rows="5" class="form-control" name="poruka" placeholder="Tekst poruke" id="poruka"></textarea>
+                                    <p class="help-block text-danger hide">Neophodno polje!</p>
+                            </div>
+                        </div>
+                        <input type="checkbox" name="pretplatiSe" id="checkBox" name="check"><strong>Obaveštavajte me o najnovijim ponudama</strong><br>
+                        <p class="lead"></p>
+                            <a href="#" class="btn btn-lg btn-default" id="submit">Pošalji</a>
+                        </p>
+                    </form>
+                    
+            </div>
+
+
+            <!--Footer-->
+            <div class="mastfoot">
+                <div class="inner">
+                    <p>2019, FON</p>
+                    <p id="datum"></p>
+                </div>
+            </div> <!--footer-->
+
+        </div>
+
+    </div>
+
+    </div>
+<!--jQuery & Javascript-->
+<script>
+    document.getElementById("datum").innerHTML = Date();
+
+    $("forma").validate();
+</script>
+<script src="js/jquery-3.1.1.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/sweetalert.js"></script>
+<script src="js/upit.js"></script>
+<script src="js/jquery.validate.js"></script>
+
+</body>
+
+</html>
